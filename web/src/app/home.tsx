@@ -146,7 +146,7 @@ export const Hero = () => {
         }}
       >
         <Grid.Container gap={2}>
-          <Grid xs={6} md={6}>
+          <Grid xs={12} md={6}>
             <Col>
               <Text
                 h1
@@ -195,7 +195,7 @@ export const Hero = () => {
               <Row gap={1}>
                 {socialMedia?.map((item, index) => {
                   return (
-                    <Col span={3} key={index}>
+                    <Col key={index}>
                       <Button auto ghost style={{ marginTop: 20 }}>
                         {item.name}
                       </Button>
@@ -206,7 +206,7 @@ export const Hero = () => {
             </Col>
           </Grid>
 
-          <Grid xs={6} md={6}>
+          <Grid xs={12} md={6}>
             <Col>
               <Image
                 src="/person1.png"
@@ -499,87 +499,105 @@ export const Contact = () => {
   return (
     <Container
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "500px",
+        marginTop: "50px",
       }}
     >
-      <Text
-        color="white"
-        h2
-        style={{ marginBottom: "20px", textAlign: "center" }}
-      >
-        Contact Me
-      </Text>
+      <Grid.Container gap={2}>
+        <Grid xs={12} md={4}>
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flex: 1,
+              flexDirection: "column",
+            }}
+          >
+            <Text
+              color="white"
+              h2
+              style={{ marginBottom: "20px", textAlign: "center" }}
+            >
+              Contact Me
+            </Text>
 
-      <Text
-        color="#ffffffAA"
-        style={{ marginBottom: "20px", textAlign: "center" }}
-      >
-        Let`s work together and build something awesome!
-      </Text>
+            <Text
+              color="#ffffffAA"
+              style={{ marginBottom: "20px", textAlign: "center" }}
+            >
+              Let`s work together and build something awesome!
+            </Text>
 
-      <Box>
-        <Row gap={1}>
-          {socialMedia?.map((item, index) => {
-            return (
-              <Col key={index}>
-                <Button auto ghost>
-                  {item.name}
-                </Button>
-              </Col>
-            );
-          })}
-        </Row>
-      </Box>
-
-      <Box>
-        <Text
-          color="#ffffffAA"
-          style={{ marginBottom: "20px", textAlign: "center" }}
-        >
-          Leave a message here
-        </Text>
-        <Col>
-          <Input
-            size="lg"
-            fullWidth
-            clearable
-            bordered
-            labelPlaceholder="Name"
-          />
-          <Spacer y={1} />
-
-          <Input
-            size="lg"
-            fullWidth
-            clearable
-            bordered
-            labelPlaceholder="Email"
-          />
-          <Spacer y={1} />
-
-          <Input
-            size="lg"
-            fullWidth
-            clearable
-            bordered
-            labelPlaceholder="Mobile"
-          />
-          <Spacer y={1} />
-
-          <Textarea size="lg" fullWidth placeholder="Message" rows={4} />
-          <Spacer y={1} />
-
-          <Box style={{ display: "flex", justifyContent: "center" }}>
-            <Button auto ghost>
-              Send Message
-            </Button>
+            <Box>
+              <Row gap={1}>
+                {socialMedia?.map((item, index) => {
+                  return (
+                    <Col key={index}>
+                      <Button auto ghost>
+                        {item.name}
+                      </Button>
+                    </Col>
+                  );
+                })}
+              </Row>
+            </Box>
           </Box>
-        </Col>
-      </Box>
+        </Grid>
+
+        <Grid xs={12} md={4}>
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flex: 1,
+              flexDirection: "column",
+            }}
+          >
+            <Text
+              color="#ffffffAA"
+              style={{ marginBottom: "20px", textAlign: "center" }}
+            >
+              Leave a message here
+            </Text>
+            <Col>
+              <Input
+                size="lg"
+                fullWidth
+                clearable
+                bordered
+                labelPlaceholder="Name"
+              />
+              <Spacer y={1} />
+
+              <Input
+                size="lg"
+                fullWidth
+                clearable
+                bordered
+                labelPlaceholder="Email"
+              />
+              <Spacer y={1} />
+
+              <Input
+                size="lg"
+                fullWidth
+                clearable
+                bordered
+                labelPlaceholder="Mobile"
+              />
+              <Spacer y={1} />
+
+              <Textarea size="lg" fullWidth placeholder="Message" rows={4} />
+              <Spacer y={1} />
+
+              <Box style={{ display: "flex", justifyContent: "center" }}>
+                <Button auto ghost>
+                  Send Message
+                </Button>
+              </Box>
+            </Col>
+          </Box>
+        </Grid>
+      </Grid.Container>
     </Container>
   );
 };
@@ -596,7 +614,7 @@ export const Footer = () => {
           marginBottom: "40px",
         }}
       >
-        <Text color="#ffffffAA" size={20}>
+        <Text color="white" size={20}>
           Made with <span style={{ color: "#ffffff" }}>❤️</span> by Vallarasu
         </Text>
       </Box>
