@@ -60,7 +60,8 @@ const theme = createTheme({
     fonts: {},
   },
 });
-export const Layout = ({ children }) => {
+export const Layout = (props: any) => {
+  const { children } = props;
   const navLinks = [
     { name: "Home", href: "#", isActive: true },
     { name: "Contact", href: "#" },
