@@ -1,7 +1,18 @@
-const nextConfig = {
-    experimental: {
+
+
+module.exports = {
+
+  async rewrites() {
+    return [
+      {
+        source: '/:any*',
+        destination: '/',
+      },
+    ];
+  },
+
+  experimental: {
     reactServerComponents: true
   }
-}
 
-module.exports = nextConfig
+};
