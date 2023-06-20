@@ -7,7 +7,7 @@ import { Container, Loading, Text } from "@nextui-org/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
+const metadata = {
   title: "Portfolio",
   description: "My personal portfolio",
 };
