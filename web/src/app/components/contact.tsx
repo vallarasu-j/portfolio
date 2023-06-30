@@ -8,11 +8,21 @@ import {
   Spacer,
   Text,
   Textarea,
+  Modal,
 } from "@nextui-org/react";
 import { Box } from "../home";
-import { G_SOCIAL_MEDIA_LINKS } from "../common";
+import { data } from "../Services/data";
+import { useState } from "react";
 
 export const Contact = () => {
+  const profile = data["profile"];
+  const [visible, setVisible] = useState(false);
+  const handler = () => setVisible(true);
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
+
   return (
     <Container
       style={{
@@ -46,7 +56,7 @@ export const Contact = () => {
 
             <Box>
               <Row gap={1}>
-                {G_SOCIAL_MEDIA_LINKS?.map((item, index) => {
+                {profile?.social?.map((item, index) => {
                   return (
                     <Col key={index}>
                       <Button auto ghost>
@@ -107,14 +117,38 @@ export const Contact = () => {
               <Spacer y={1} />
 
               <Box style={{ display: "flex", justifyContent: "center" }}>
-                <Button auto ghost>
+                <Button auto ghost  onPress={handler}>
                   Send Message
                 </Button>
+                
               </Box>
             </Col>
           </Box>
         </Grid>
       </Grid.Container>
+
+      <Modal
+        closeButton
+        blur
+        aria-labelledby="modal-title"
+        open={visible}
+        onClose={closeHandler}
+      >
+        <Modal.Header>
+            <Text b size={18}>
+              Thank you for your message!
+            </Text>
+        </Modal.Header>
+        <Modal.Body>
+         
+          
+        </Modal.Body>
+        <Modal.Footer>
+          <Button auto flat color="error" onPress={closeHandler}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 };

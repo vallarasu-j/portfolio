@@ -1,4 +1,5 @@
 import { Button, Navbar, Text } from "@nextui-org/react";
+import { data } from "../Services/data";
 
 export const HomeLayout = (props: any) => {
   const { children } = props;
@@ -8,6 +9,8 @@ export const HomeLayout = (props: any) => {
     { name: "Contact", href: "#" },
     { name: "Blogs", href: "#" },
   ];
+
+  const profile = data;
 
   return (
     <>
@@ -21,11 +24,11 @@ export const HomeLayout = (props: any) => {
       >
         <Navbar.Brand>
           <Text b color="inherit" hideIn="xs" size="large">
-            VJ - Portfolio
+            {profile?.title}
           </Text>
         </Navbar.Brand>
 
-        <Navbar.Content hideIn="xs">
+        {/* <Navbar.Content hideIn="xs">
           {navLinks.map((item, index) => {
             return (
               <>
@@ -35,21 +38,20 @@ export const HomeLayout = (props: any) => {
               </>
             );
           })}
-        </Navbar.Content>
+        </Navbar.Content> */}
 
         <Navbar.Content>
-          <Navbar.Link color="inherit" href="/login">
+          {/* <Navbar.Link color="inherit" href="/login">
             Login
-          </Navbar.Link>
+          </Navbar.Link> */}
           <Navbar.Item>
-            <Button
-              auto
-              flat
-              onClick={() => {
-                window.scrollTo(0, document.body.scrollHeight);
-              }}
-            >
-              Let`s Work Together
+            <Button auto flat>
+              <a
+                href={`mailto:${profile?.email}`}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                Let`s Work Together
+              </a>
             </Button>
           </Navbar.Item>
         </Navbar.Content>

@@ -8,32 +8,10 @@ import {
   Text,
 } from "@nextui-org/react";
 import { Box } from "../home";
+import { data } from "../Services/data";
 
 export const Projects = () => {
-  const projects = [
-    {
-      name: "Blog Website",
-      description: "A Blog Website built using React, NextJS and MongoDB.",
-      link: "https://www.google.com",
-      cover:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c12076163913421.63eddcb973737.jpg",
-    },
-    {
-      name: "Blog Website",
-      description: "A Blog Website built using React, NextJS and MongoDB.",
-      link: "https://www.google.com",
-      cover:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c12076163913421.63eddcb973737.jpg",
-    },
-    {
-      name: "Blog Website",
-      description: "A Blog Website built using React, NextJS and MongoDB.",
-      link: "https://www.google.com",
-      cover:
-        "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c12076163913421.63eddcb973737.jpg",
-    },
-  ];
-
+  const projects = data["projects"];
   return (
     <Container>
       <Text
@@ -41,11 +19,11 @@ export const Projects = () => {
         h2
         style={{ marginBottom: "20px", textAlign: "center" }}
       >
-        Explore My Projects
+        {projects?.title}
       </Text>
 
       <Grid.Container>
-        {projects?.map((item, index) => {
+        {projects?.items?.map((item, index) => {
           return (
             <Grid xs={12} md={4} key={index}>
               <ProjectCard data={item} />
@@ -130,7 +108,7 @@ export const ProjectCard = (props: any) => {
             <Row>
               <Col>
                 <Text color="#000" size={12} h1>
-                  {data?.description}
+                  {data?.desc}
                 </Text>
               </Col>
               <Col>
