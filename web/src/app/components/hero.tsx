@@ -8,9 +8,12 @@ import {
   Text,
   Image,
 } from "@nextui-org/react";
-import { G_SOCIAL_MEDIA_LINKS } from "../common";
+import { data } from "../Services/data";
 
 export const Hero = () => {
+
+  const profile = data["profile"];
+
   return (
     <Container>
       <Card
@@ -45,7 +48,7 @@ export const Hero = () => {
                 }}
                 weight="bold"
               >
-                I`m Vallarasu
+                I`m {profile?.name}
               </Text>
               <Text
                 h1
@@ -56,7 +59,7 @@ export const Hero = () => {
                 }}
                 weight="bold"
               >
-                Full Stack Developer
+                {profile?.job}
               </Text>
 
               <Text
@@ -72,7 +75,7 @@ export const Hero = () => {
               </Text>
 
               <Row gap={1}>
-                {G_SOCIAL_MEDIA_LINKS?.map((item, index) => {
+                {profile?.social?.map((item, index) => {
                   return (
                     <Col key={index}>
                       <Button auto ghost style={{ marginTop: 20 }}>
