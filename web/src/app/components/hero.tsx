@@ -11,16 +11,15 @@ import {
 import { data } from "../Services/data";
 
 export const Hero = () => {
-
   const profile = data["profile"];
 
   return (
     <Container>
       <Card
         style={{
-          background: "linear-gradient(45deg, #1a202c -20%, #2d3748 100%)",
+          background: "background-color",
           borderRadius: "10px",
-          boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+          boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
           color: "#fff",
 
           padding: "50px",
@@ -75,12 +74,16 @@ export const Hero = () => {
               </Text>
 
               <Row gap={1}>
-                {profile?.social?.map((item, index) => {
+                {profile?.socialMediaLinks?.map((item, index) => {
                   return (
                     <Col key={index}>
-                      <Button auto ghost style={{ marginTop: 20 }}>
-                        {item.name}
-                      </Button>
+                      <a
+                        style={{ marginTop: 20 }}
+                        href={item?.link}
+                        target="_blank"
+                      >
+                        {item?.label}
+                      </a>
                     </Col>
                   );
                 })}

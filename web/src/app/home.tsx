@@ -1,6 +1,7 @@
 "use client";
 import { styled } from "@nextui-org/react";
 import { HomeLayout } from "./layouts/homeLayout";
+import {useTheme} from 'next-themes';
 import { Hero } from "./components/hero";
 import { AboutMe } from "./components/about";
 import { Services } from "./components/services";
@@ -13,8 +14,11 @@ export const Box = styled("div", {
 });
 
 export const Home = () => {
+  
+  const {theme, setTheme} = useTheme();
+
   return (
-    <>
+    <div>
       <HomeLayout>
         <Hero />
         <AboutMe />
@@ -23,6 +27,6 @@ export const Home = () => {
         <Contact />
         <Footer />
       </HomeLayout>
-    </>
+    </div>
   );
 };

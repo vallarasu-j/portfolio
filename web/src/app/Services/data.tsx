@@ -1,21 +1,21 @@
 export const data = {
-  title: "VJ ~ Explore the unseen 🍃",
-  email: "hello@vallarasu.com",
+  title: "Portfolio",
+  email: "",
   profile: {
     name: "Vallarasu",
     job: "Full Stack Developer",
-    social: [
+    socialMediaLinks: [
       {
-        name: "Instagram",
-        url: "",
+        label: "Instagram",
+        link: "https://www.instagram.com/vallarasu.prince/",
       },
       {
-        name: "Linkedin",
-        url: "",
+        label: "Linkedin",
+        link: "https://www.linkedin.com/in/vallarasu-j/",
       },
       {
-        name: "Github",
-        url: "",
+        label: "Github",
+        link: "https://github.com/vallarasu-prince",
       },
     ],
   },
@@ -48,24 +48,25 @@ export const data = {
 
   projects: {
     title: "Explore My Projects",
+    repoUrl: "https://github.com/vallarasu-prince?tab=repositories",
     items: [
       {
         name: "Blog Website",
-        desc: "A Blog Website built using React, Python and MongoDB.",
+        desc: "Blog - content sharing platform.",
         cover: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c12076163913421.63eddcb973737.jpg",
-        link: "",
+        link: "https://github.com/vallarasu-prince/blog-content-sharing-platform",
       },
       {
-        name: "Blog Website",
-        desc: "A Blog Website built using React, Python and MongoDB.",
+        name: "Eventz",
+        desc: "The Event management and ticket booking platform.",
         cover: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c12076163913421.63eddcb973737.jpg",
-        link: "",
+        link: "https://github.com/vallarasu-prince/eventz",
       },
       {
-        name: "Blog Website",
-        desc: "A Blog Website built using React, Python and MongoDB.",
+        name: "V Code",
+        desc: "A Low-code platform for easy web UI development.",
         cover: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/c12076163913421.63eddcb973737.jpg",
-        link: "",
+        link: "https://github.com/vallarasu-prince/v-code",
       },
     ],
   },

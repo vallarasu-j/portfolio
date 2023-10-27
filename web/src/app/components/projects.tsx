@@ -15,7 +15,7 @@ export const Projects = () => {
   return (
     <Container>
       <Text
-        color="white"
+        color="font-primary"
         h2
         style={{ marginBottom: "20px", textAlign: "center" }}
       >
@@ -41,7 +41,9 @@ export const Projects = () => {
         }}
       >
         <Button auto ghost>
-          View All Projects
+          <a href={projects?.repoUrl} target="_blank" rel="noreferrer">
+            View All Projects
+          </a>
         </Button>
       </Box>
     </Container>

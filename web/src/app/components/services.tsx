@@ -12,7 +12,7 @@ export const Services = () => {
       }}
     >
       <Text
-        color="white"
+        color="font-primary"
         h2
         style={{ marginBottom: "20px", textAlign: "center" }}
       >
@@ -29,8 +29,7 @@ export const Services = () => {
                 }}
                 css={{
                   "&:hover": {
-                    background:
-                      "linear-gradient(45deg, #1a202c -20%, #2d3748 100%)",
+                    background:"background-color",
                     transform: "scale(1.05)",
                   },
                 }}
@@ -54,9 +53,9 @@ export const Services = () => {
                   >
                     {item?.desc}
                   </Text>
-                  <Button auto ghost style={{ marginTop: 20 }} href={item.link}>
+                  {/* <Button auto ghost style={{ marginTop: 20 }} href={item.link}>
                     {item.name} - Details
-                  </Button>
+                  </Button> */}
                 </Box>
               </Card>
             </Grid>
