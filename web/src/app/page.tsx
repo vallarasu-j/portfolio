@@ -2,41 +2,45 @@
 import { BrowserRouter } from "react-router-dom";
 import { NextUIProvider, createTheme } from "@nextui-org/react";
 import Routes from "./routes";
+import { ThemeProvider } from "next-themes";
 
-const theme = createTheme({
-  type: "dark", // it could be "light" or "dark"
+const lightTheme = createTheme({
+  type: "light",
   theme: {
     colors: {
-      // brand colors
-      // primaryLight: "$green200",
-      // primaryLightHover: "$green300",
-      // primaryLightActive: "$green400",
-      // primaryLightContrast: "$green600",
-      // primary: "#4ADE7B",
-      // primaryBorder: "$green500",
-      // primaryBorderHover: "$green600",
-      // primarySolidHover: "$green700",
-      // primarySolidContrast: "$white",
-      // primaryShadow: "$green500",
-      // gradient:
-      //   "linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)",
-      // link: "#5E1DAD",
-      // you can also create your own color
-      // myColor: "#ff4ecd",
-      // ...  more colors
+      "font-primary": "black",
+      "background-color": "#F8F8FF",
     },
-    space: {},
-    fonts: {},
   },
 });
+
+const darkTheme = createTheme({
+  type: "dark",
+  theme: {
+    colors: {
+      "font-primary": "white",
+      "background-color": "linear-gradient(45deg, #1a202c -20%, #2d3748 100%)",
+    },
+  },
+});
+
 export default function Home() {
   return (
     <>
-      <NextUIProvider theme={theme}>
-        <BrowserRouter>
-          <Routes />
-        </BrowserRouter>
-      </NextUIProvider>
+      <ThemeProvider
+        defaultTheme="darkTheme"
+        attribute="class"
+        value={{
+          light: lightTheme.className,
+          dark: darkTheme.className,
+        }}
+      >
+        <NextUIProvider>
+          <BrowserRouter>
+            <Routes />
+          </BrowserRouter>
+        </NextUIProvider>
+      </ThemeProvider>
     </>
   );
 }

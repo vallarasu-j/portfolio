@@ -9,12 +9,10 @@ export const Footer = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: "50px",
-          marginBottom: "40px",
         }}
       >
-        <Text color="white" size={20}>
-          Made with <span style={{ color: "#ffffff" }}>❤️</span> by Vallarasu
+        <Text color="font-primary" size={20}>
+          Made with <span style={{ color:"font-primary" }}>❤️</span> by Vallarasu
         </Text>
       </Box>
     </Container>

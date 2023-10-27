@@ -15,12 +15,12 @@ export const AboutMe = () => {
         height: "500px",
       }}
     >
-      <Text color="white" h2>
+      <Text color="font-primary" h2>
         {about?.title}
       </Text>
 
       <Box style={{ maxWidth: "700px", textAlign: "center" }}>
-        <Text color="white" size={20}>
+        <Text color="font-primary" size={20}>
           {about?.desc}
         </Text>
       </Box>

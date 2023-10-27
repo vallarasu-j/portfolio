@@ -1,8 +1,11 @@
 import { Button, Navbar, Text } from "@nextui-org/react";
+import { useTheme } from "next-themes";
 import { data } from "../Services/data";
 
 export const HomeLayout = (props: any) => {
   const { children } = props;
+
+  const { theme, setTheme } = useTheme();
 
   const navLinks = [
     { name: "Home", href: "#", isActive: true },
@@ -53,6 +56,16 @@ export const HomeLayout = (props: any) => {
                 Let`s Work Together
               </a>
             </Button>
+          </Navbar.Item>
+
+          <Navbar.Item>
+            <a
+              onClick={() => {
+                setTheme(theme === "dark" ? "light" : "dark");
+              }}
+            >
+              {theme === "dark" ? "🌞" : "🌙"}
+            </a>
           </Navbar.Item>
         </Navbar.Content>
       </Navbar>
