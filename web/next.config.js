@@ -1,18 +1,11 @@
-
-
-module.exports = {
-
-  async rewrites() {
-    return [
-      {
-        source: '/:any*',
-        destination: '/',
-      },
-    ];
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "res.cloudinary.com", pathname: "**" },
+      { protocol: "https", hostname: "images.unsplash.com", pathname: "**" },
+    ],
   },
-
-  experimental: {
-    reactServerComponents: true
-  }
-
 };
+
+module.exports = nextConfig;
