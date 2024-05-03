@@ -1,7 +1,3 @@
-export * from "./Sk8ter";
-export * from "./MagentaKitchenSVG";
-export * from "./ShopApiSVG";
-export * from "./ShadcnLandingSVG";
 
 type IconType = { color: string; size: number };
 

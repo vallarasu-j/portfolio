@@ -13,10 +13,6 @@ const routes: routeProps[] = [
     label: "Home",
     url: "/",
   },
-  // {
-  //   label: "Projects",
-  //   url: "/projects",
-  // },
   {
     label: "Contact",
     url: "/contact",
