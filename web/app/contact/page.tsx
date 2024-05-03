@@ -35,7 +35,7 @@ export default function Contact() {
           >
             <CardBody
               className="flex justify-center items-center"
-              onClick={() => window.open(`${x}`, "_blank")}
+              onClick={() => window.open(`${linkedIn}`, "_blank")}
             >
               <LinkedInSVG />
             </CardBody>
