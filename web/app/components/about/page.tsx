@@ -7,6 +7,8 @@ import { iconType, educationType } from "@/app/types";
 import { educationList, techonologyIconList, whoAmIData } from "@/app/utils";
 import IconComponent from "../ui/IconComponent";
 import { Button } from "@nextui-org/button";
+import { Experience } from "../experience";
+import { experienceList } from "@/app/utils/experienceList";
 
 const { fullName, whoAmI } = whoAmIData;
 
@@ -19,11 +21,11 @@ export default function About() {
             <Avatar
               isBordered
               radius="full"
-              size="md"
+              size="lg"
               src="https://res.cloudinary.com/dhd7fpcgh/image/upload/v1713420634/lfz3ivsgj1ubnw9yvszu.jpg"
             />
             <div className="flex flex-col gap-1 items-start justify-center">
-              <h4 className="text-small font-semibold leading-none text-default-600">
+              <h4 className="text-medium font-semibold leading-none text-default-600">
                 {fullName}
               </h4>
               <h5 className="text-small tracking-tight text-default-400">
@@ -86,6 +88,22 @@ export default function About() {
                 career={education.career}
                 years={education.years}
                 description={education.description}
+              />
+            ))}
+          </div>
+        </CardBody>
+      </Card>
+      <Card>
+        <CardBody className="gap-2 flex-wrap">
+          <h2 className="text-2xl font-bold ">Experience</h2>
+
+          <div className="flex flex-col lg:flex-col gap-2">
+            {experienceList.map((experience: any) => (
+              <Experience
+                key={`experience-item-${experience.career}`}
+                career={experience.career}
+                years={experience.years}
+                description={experience.description}
               />
             ))}
           </div>

@@ -1,6 +1,4 @@
-import { educationType } from "../types";
-
-export const Education = ({ career, years, description }: educationType) => {
+export const Experience = ({ career, years, description }: any) => {
   return (
     <div>
       <h3 className="text-sm">{career}</h3>
