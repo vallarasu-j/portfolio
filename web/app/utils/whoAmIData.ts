@@ -1,8 +1,8 @@
 import { whoAmIDataType } from "../types/whoAmIData";
 
 export const whoAmIData: whoAmIDataType = {
-  fullName: "Vallarasu",
-  profession: "Fullstack developer",
-  whoAmI: "🌟 Hello! I'm Vallarasu, a Full-Stack Developer at SISCASO, where I blend React and Python magic to craft stunning web solutions. With 2 years of experience, I'm fluent in Python, JavaScript, and React, weaving simplicity into complexity. Passionate about problem-solving and tech's positive impact, I'm here to code a better world, one line at a time. Let's connect and create wonders together! 🚀",
+  fullName: "Vallarasu Jayachandran",
+  profession: "Full Stack Developer | AI-Powered Application Development",
+  whoAmI: "Full Stack Developer and Technical Lead with 4+ years of experience building scalable web applications and AI-powered products. Skilled in React.js, TypeScript, Python, Flask, Node.js, MongoDB, AWS, RAG, LangChain, LangGraph, OpenAI APIs, AI Agents and Large Language Models (LLMs). Experienced in developing intelligent search systems, conversational AI applications and cloud-native solutions. Proven ability to deliver end-to-end products with a focus on performance, scalability, and business impact.",
   quote: "Explore the unseen",
 };

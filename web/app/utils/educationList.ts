@@ -2,9 +2,9 @@ import { educationType } from "../types";
 
 export const educationList: educationType[] = [
   {
-    career: "Adhiyamaan College Of Engineering, Hosur, Tamilnadu, India",
+    career: "Adhiyamaan College of Engineering, Hosur, Tamil Nadu, India",
     years: "2018 - 2022",
     description:
-      "Bachelor of Engineering - BE, Electronics and Communication Engineering",
+      "BE - Electronics & Communication Engineering (8.4 CGPA)",
   },
 ];
